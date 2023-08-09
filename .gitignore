@@ -1,0 +1,7 @@
+.cph
+input.txt
+output.txt
+error.txt
+*.exe
+*.o
+.vscode
