@@ -5,3 +5,4 @@ error.txt
 *.exe
 *.o
 .vscode
+*.bin
