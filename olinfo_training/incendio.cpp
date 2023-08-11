@@ -18,7 +18,7 @@ int alzati(int N, int M, int X[], int Y[]) { // time: O(M ^ 2)
     vis.erase(curr);
 
     for(const int& next : vis) {
-      int dx = abs(X[curr] - X[next]), dy = abs(Y[curr] - Y[next]), 
+      int dx = abs(X[curr] - X[next]), dy = abs(Y[curr] - Y[next]),
         t = (dx == 0 || dy == 0) - 1;
       int w = (dx + dy + t) / 2, d = max(dist[curr], w);
       if(d < dist[next]) dist[next] = d;
@@ -26,7 +26,7 @@ int alzati(int N, int M, int X[], int Y[]) { // time: O(M ^ 2)
   }
 
   int ans = N;
-  for(int i = M - 1; i >= 0; --i) 
+  for(int i = M - 1; i >= 0; --i)
     ans = min(max(dist[i], min(N - X[i] - 1, Y[i])), ans);
   return ans - 1;
 }

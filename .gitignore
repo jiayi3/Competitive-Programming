@@ -6,3 +6,4 @@ error.txt
 *.o
 .vscode
 *.bin
+*.editorconfig
